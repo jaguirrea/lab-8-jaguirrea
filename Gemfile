@@ -32,7 +32,7 @@ gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-
+gem 'webtech', git: 'https://github.com/ICC4103-202310-WebTech/webtech-lab-tests.git', branch: 'main'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
