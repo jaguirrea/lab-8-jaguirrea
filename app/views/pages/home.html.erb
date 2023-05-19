@@ -1,3 +1,22 @@
-<div class="container text-center">
-    <h1>Restaurant APP</h1>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top 3 Restaurantes</title>
+</head>
+<body>
+  <h1>Top 3 Restaurantes con más items</h1>
+  <div id="top-restaurants"></div>
+
+  <script>
+    const topRestaurantsDiv = document.getElementById("top-restaurants");
+
+    let html = "<ol>";
+    restaurantes.slice(0, 3).forEach((restaurante, index) => {
+      html += <li>${restaurante.nombre} - ${restaurante.items} items</li>;
+    });
+    html += "</ol>";
+
+    topRestaurantsDiv.innerHTML = html;
+  </script>
+</body>
+</html>
