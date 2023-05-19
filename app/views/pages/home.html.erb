@@ -5,18 +5,16 @@
 </head>
 <body>
   <h1>Top 3 Restaurantes con más items</h1>
-  <div id="top-restaurants"></div>
-
-  <script>
-    const topRestaurantsDiv = document.getElementById("top-restaurants");
-
-    let html = "<ol>";
-    restaurantes.slice(0, 3).forEach((restaurante, index) => {
-      html += <li>${restaurante.nombre} - ${restaurante.items} items</li>;
-    });
-    html += "</ol>";
-
-    topRestaurantsDiv.innerHTML = html;
-  </script>
+  <div class="container">
+  <%= Restaurant.select('restaurants.*, COUNT(items.id) AS item_count')
+                                 .joins(:items)
+                                 .group('restaurants.id')
+                                 .order('item_count DESC')
+                                 .limit(3)
+                                 .each do |restaurant|%>
+        <h5><%= restaurant.name %></h5>
+        <h6><%= restaurant.items.count %></h6>
+    </div>
+    <%end%>
 </body>
 </html>
