@@ -1,27 +1,9 @@
 <div id="<%= dom_id item %>">
-  <p>
-    <strong>Name:</strong>
-    <%= item.name %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= item.price %>
-  </p>
-
-  <p>
-    <strong>Callories:</strong>
-    <%= item.callories %>
-  </p>
-
-  <p>
-    <strong>Dish:</strong>
-    <%= item.dish_id %>
-  </p>
-
-  <p>
-    <strong>Restaurant:</strong>
-    <%= item.restaurant_id %>
-  </p>
-
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= item.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Price: $<%= item.price %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Callories: <%= item.callories %></h6>
+  </div>
+  </div>  
 </div>

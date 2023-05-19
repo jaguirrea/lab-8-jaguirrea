@@ -28,12 +28,12 @@
 
   <div>
     <%= form.label :dish_id, style: "display: block" %>
-    <%= form.text_field :dish_id %>
+    <%= form.collection_select :dish_id, Dish.all, :id, :name, { include_blank: 'Select a Dish' }, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :restaurant_id, style: "display: block" %>
-    <%= form.text_field :restaurant_id %>
+    <%= form.collection_select :restaurant_id, Restaurant.all, :id, :name, { include_blank: "Select a Restaurant" }, class: "form-control" %>
   </div>
 
   <div>

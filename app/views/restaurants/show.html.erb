@@ -3,8 +3,8 @@
 <%= render @restaurant %>
 
 <div>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
+  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant), class:'btn btn-outline-success btn-sm' %> |
+  <%= link_to "Back to restaurants", restaurants_path, class:'btn btn-outline-danger btn-sm' %>
 
   <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
 </div>

@@ -1,12 +1,8 @@
 <div id="<%= dom_id restaurant %>">
-  <p>
-    <strong>Name:</strong>
-    <%= restaurant.name %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= restaurant.address %>
-  </p>
-
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+  <h5 class="card-title"><%= restaurant.name %></h5>
+  <h6 class="card-subtitle mb-2 text-muted">Address: <%= restaurant.address %></h6>
+</div>
+</div>  
 </div>

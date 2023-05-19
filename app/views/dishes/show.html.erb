@@ -3,8 +3,8 @@
 <%= render @dish %>
 
 <div>
-  <%= link_to "Edit this dish", edit_dish_path(@dish) %> |
-  <%= link_to "Back to dishes", dishes_path %>
+  <%= link_to "Edit this dish", edit_dish_path(@dish), class:'btn btn-outline-success btn-sm'%> |
+  <%= link_to "Back to dishes", dishes_path, class: 'btn btn-outline-danger btn-sm' %>
 
   <%= button_to "Destroy this dish", @dish, method: :delete %>
 </div>
